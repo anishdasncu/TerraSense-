@@ -1,0 +1,68 @@
+:root {
+  --primary: #2E7D32;
+  --secondary: #4CAF50;
+  --accent: #4FC3F7;
+  --background: #F5F7F4;
+  --card-bg: #FFFFFF;
+  --text: #1E293B;
+}
+
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--background); color: var(--text); }
+.app { max-width: 800px; margin: 0 auto; padding: 20px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+header h2 { color: var(--primary); }
+
+nav { display: flex; gap: 8px; background: white; padding: 6px; border-radius: 999px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+nav button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+nav button:hover { background: #eef7ee; }
+nav button.active { background: var(--primary); color: white; box-shadow: 0 2px 6px rgba(46,125,50,0.4); }
+.leaf-icon { font-size: 28px; margin-left: 12px; }
+
+h2 { margin-top: 28px; margin-bottom: 10px; font-size: 16px; color: #444; }
+
+.hero {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: white;
+  padding: 40px 24px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.hero h1 { margin: 0 0 12px; font-size: 26px; }
+.hero p { margin: 0 0 20px; opacity: 0.95; }
+.hero button {
+  background: white;
+  color: var(--primary);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.card { background: var(--card-bg); border-radius: 8px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 8px; font-size: 13px; color: #666; }
+.card p { margin: 0; font-size: 20px; font-weight: 700; }
+.card small { color: #888; }
+
+fieldset { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 16px; padding: 12px 16px; }
+legend { font-weight: 600; padding: 0 6px; }
+form label { display: block; margin-bottom: 12px; font-size: 14px; font-weight: 500; }
+form select, form input[type="number"] { display: block; margin-top: 4px; padding: 8px; width: 100%; max-width: 320px; }
+form button { padding: 10px 18px; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+form button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.result { margin-top: 20px; background: #ecfdf5; padding: 16px; border-radius: 8px; }
+.result ul { margin: 8px 0 0; padding-left: 18px; }
+
+.progress-list { list-style: none; padding: 0; }
+.progress-list li { background: white; padding: 10px 14px; margin-bottom: 6px; border-radius: 6px; }
